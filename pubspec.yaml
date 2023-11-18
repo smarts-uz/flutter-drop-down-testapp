@@ -41,6 +41,7 @@ dependencies:
   multiselect: ^0.1.0
   multiple_search_selection: ^2.5.4
   multi_dropdown: ^2.1.0
+  drop_down_list: ^0.0.5
 
 dev_dependencies:
   flutter_test:

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 
-class MulitDropDownPage extends StatefulWidget {
-  const MulitDropDownPage({Key? key}) : super(key: key);
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
-  State<MulitDropDownPage> createState() => _MulitDropDownPageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 
   static const _headerStyle = TextStyle(
     fontSize: 12,
@@ -13,7 +14,19 @@ class MulitDropDownPage extends StatefulWidget {
   );
 }
 
-class _MulitDropDownPageState extends State<MulitDropDownPage> {
+class User {
+  final String name;
+  final int id;
+
+  User({required this.name, required this.id});
+
+  @override
+  String toString() {
+    return 'User(name: $name, id: $id)';
+  }
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   final MultiSelectController _controller = MultiSelectController();
 
   final List<ValueItem> _selectedOptions = [];
@@ -28,7 +41,7 @@ class _MulitDropDownPageState extends State<MulitDropDownPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('WRAP', style: MulitDropDownPage._headerStyle),
+                const Text('WRAP', style: MyHomePage._headerStyle),
                 const SizedBox(
                   height: 4,
                 ),
@@ -38,13 +51,19 @@ class _MulitDropDownPageState extends State<MulitDropDownPage> {
                   onOptionSelected: (options) {
                     debugPrint(options.toString());
                   },
-                  options: const <ValueItem>[
-                    ValueItem(label: 'Option 1', value: 'value1'),
-                    ValueItem(label: 'Option 2', value: 'value2'),
-                    ValueItem(label: 'Option 3', value: 'value3'),
-                    ValueItem(label: 'Option 4', value: 'value4'),
-                    ValueItem(label: 'Option 5', value: 'value5'),
-                    ValueItem(label: 'Option 5', value: 'value6'),
+                  options: <ValueItem>[
+                    ValueItem(
+                        label: 'Option 1', value:'value'),
+                    ValueItem(
+                        label: 'Option 2', value: 'value'),
+                    ValueItem(
+                        label: 'Option 3', value: 'value'),
+                    ValueItem(
+                        label: 'Option 4', value: 'value'),
+                    ValueItem(
+                        label: 'Option 5', value: 'value'),
+                    ValueItem(
+                        label: 'Option 5', value: 'value'),
                   ],
                   maxItems: 4,
                   selectionType: SelectionType.multi,
@@ -112,7 +131,7 @@ class _MulitDropDownPageState extends State<MulitDropDownPage> {
                 const SizedBox(
                   height: 50,
                 ),
-                const Text('SCROLL', style: MulitDropDownPage._headerStyle),
+                const Text('SCROLL', style: MyHomePage._headerStyle),
                 const SizedBox(
                   height: 4,
                 ),
@@ -137,7 +156,7 @@ class _MulitDropDownPageState extends State<MulitDropDownPage> {
                 const SizedBox(
                   height: 50,
                 ),
-                const Text('FROM NETWORK', style: MulitDropDownPage._headerStyle),
+                const Text('FROM NETWORK', style: MyHomePage._headerStyle),
                 const SizedBox(
                   height: 4,
                 ),
