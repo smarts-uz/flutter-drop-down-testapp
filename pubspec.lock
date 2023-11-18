@@ -123,6 +123,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  multiselect_nested:
+    dependency: "direct main"
+    description:
+      name: multiselect_nested
+      sha256: "4b414659e1c46a934acc73f953fc56ebd045b0a07150f4ce8bf718151599857a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   ninja_dropdown:
     dependency: "direct main"
     description:
