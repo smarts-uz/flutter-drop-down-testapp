@@ -1,8 +1,5 @@
-import 'package:drop_down_testapp/rashail_multi_dropdown.dart';
 import 'package:flutter/material.dart';
-
-import 'multiselect_nested.dart';
-import 'ninja_dropdown.dart';
+import 'multiselect.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: MultiSelectNestedPage(),
+      home: MultiSelectPage(
+        title: 'MultiSelect Package',
+      ),
     );
   }
 }

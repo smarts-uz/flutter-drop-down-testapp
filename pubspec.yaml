@@ -38,6 +38,7 @@ dependencies:
   rashail_multi_dropdown: ^0.0.1+5
   ninja_dropdown: ^0.1.0+3
   multiselect_nested: ^1.1.0
+  multiselect: ^0.1.0
 
 dev_dependencies:
   flutter_test:
