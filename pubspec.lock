@@ -123,6 +123,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  ninja_dropdown:
+    dependency: "direct main"
+    description:
+      name: ninja_dropdown
+      sha256: d7b6018ccd813c7caeb59846cc3a5225b519357352a6df3cf73f271aeaf6f5ec
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.0+3"
   path:
     dependency: transitive
     description:
