@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'multiple_search_selection.dart';
 import 'multiselect.dart';
 
 void main() {
@@ -13,8 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: MultiSelectPage(
-        title: 'MultiSelect Package',
+      home: MultipleSearchSelectionPage(
+        title: 'MultipleSearchSelection',
       ),
     );
   }

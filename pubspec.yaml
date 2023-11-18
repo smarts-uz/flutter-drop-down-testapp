@@ -39,6 +39,7 @@ dependencies:
   ninja_dropdown: ^0.1.0+3
   multiselect_nested: ^1.1.0
   multiselect: ^0.1.0
+  multiple_search_selection: ^2.5.4
 
 dev_dependencies:
   flutter_test:
