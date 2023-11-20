@@ -24,6 +24,7 @@ class _MultiSelectNestedPageState extends State<MultiSelectNestedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('multiselect_nested')),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Center(

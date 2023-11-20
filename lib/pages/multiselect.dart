@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:multiselect/multiselect.dart';
 
 class MultiSelectPage extends StatefulWidget {
-  const MultiSelectPage({super.key, required this.title});
+  const MultiSelectPage({super.key});
 
-  final String title;
 
   @override
   State<MultiSelectPage> createState() => _MultiSelectPageState();
@@ -24,6 +23,7 @@ class _MultiSelectPageState extends State<MultiSelectPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('multiselect')),
         body: Center(
       child: Padding(
         padding: const EdgeInsets.all(20.0),

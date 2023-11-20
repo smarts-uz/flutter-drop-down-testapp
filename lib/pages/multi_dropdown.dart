@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class MultiDropdownApp extends StatefulWidget {
+  const MultiDropdownApp({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MultiDropdownApp> createState() => _MultiDropdownState();
 
   static const _headerStyle = TextStyle(
     fontSize: 12,
@@ -26,7 +26,7 @@ class User {
   }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MultiDropdownState extends State<MultiDropdownApp> {
   final MultiSelectController _controller = MultiSelectController();
 
   final List<ValueItem> _selectedOptions = [];
@@ -34,6 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('multi_dropdown')),
         backgroundColor: Colors.grey.shade300,
         body: SafeArea(
           child: Padding(
@@ -41,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('WRAP', style: MyHomePage._headerStyle),
+                const Text('WRAP', style: MultiDropdownApp._headerStyle),
                 const SizedBox(
                   height: 4,
                 ),
@@ -51,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   onOptionSelected: (options) {
                     debugPrint(options.toString());
                   },
-                  options: <ValueItem>[
+                  options: const <ValueItem>[
                     ValueItem(
                         label: 'Option 1', value:'value'),
                     ValueItem(
@@ -131,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const SizedBox(
                   height: 50,
                 ),
-                const Text('SCROLL', style: MyHomePage._headerStyle),
+                const Text('SCROLL', style: MultiDropdownApp._headerStyle),
                 const SizedBox(
                   height: 4,
                 ),
@@ -156,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const SizedBox(
                   height: 50,
                 ),
-                const Text('FROM NETWORK', style: MyHomePage._headerStyle),
+                const Text('FROM NETWORK', style: MultiDropdownApp._headerStyle),
                 const SizedBox(
                   height: 4,
                 ),

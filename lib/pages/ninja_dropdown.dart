@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:ninja_dropdown/ninja_dropdown.dart';
 
-class Example1 extends StatefulWidget {
-  final String title;
-
-  const Example1({super.key, required this.title});
+class NinjaDropdownApp extends StatefulWidget {
+  const NinjaDropdownApp({super.key});
 
   @override
-  State<Example1> createState() => _Example1State();
+  State<NinjaDropdownApp> createState() => _NinjaDropdownAppState();
 }
 
-class _Example1State extends State<Example1> {
+class _NinjaDropdownAppState extends State<NinjaDropdownApp> {
   @override
   Widget build(BuildContext context) {
     List fruitList = [
@@ -22,7 +20,7 @@ class _Example1State extends State<Example1> {
       "Custard apple"
     ];
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(title: const Text('ninja_dropdown')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

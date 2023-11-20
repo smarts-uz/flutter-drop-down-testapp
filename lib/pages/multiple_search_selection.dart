@@ -3,10 +3,9 @@ import 'package:multiple_search_selection/helpers/create_options.dart';
 import 'package:multiple_search_selection/multiple_search_selection.dart';
 
 class MultipleSearchSelectionPage extends StatefulWidget {
-  const MultipleSearchSelectionPage({Key? key, required this.title})
+  const MultipleSearchSelectionPage({Key? key})
       : super(key: key);
 
-  final String title;
 
   @override
   State<MultipleSearchSelectionPage> createState() =>
@@ -19,7 +18,7 @@ class _MultipleSearchSelectionPageState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text('multiple_search_selection'),
       ),
       body: MultipleSearchSelection<Country>.creatable(
         title: Padding(

@@ -1,10 +1,7 @@
 import 'package:drop_down_list/drop_down_list.dart';
 import 'package:drop_down_list/model/selected_list_item.dart';
+import 'package:drop_down_testapp/constants/constants.dart';
 import 'package:flutter/material.dart';
-
-import './drop_down_list_constand.dart';
-
-
 
 class DropDownListExample extends StatefulWidget {
   const DropDownListExample({
@@ -70,6 +67,7 @@ class _DropDownListExampleState extends State<DropDownListExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      appBar: AppBar(title: const Text('drop_down_list')),
       body: SafeArea(
         child: _mainBody(),
       ),

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:rashail_multi_dropdown/rashail_multi_dropdown.dart';
 
-class RashailMulitDropDownPage extends StatelessWidget {
-  const RashailMulitDropDownPage({Key? key}) : super(key: key);
+class RashailMulitDropDown extends StatelessWidget {
+  const RashailMulitDropDown({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('rashail_multi_dropdown')),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8),
