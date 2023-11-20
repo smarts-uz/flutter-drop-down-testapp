@@ -1,3 +1,4 @@
+import 'package:drop_down_testapp/pages/animated_custom_dropdown.dart';
 import 'package:drop_down_testapp/pages/drop_down_list.dart';
 import 'package:drop_down_testapp/pages/multi_dropdown.dart';
 import 'package:drop_down_testapp/pages/multiple_search_selection.dart';
@@ -110,6 +111,15 @@ class MyRealPage extends StatelessWidget {
                 ));
               },
               child: const Text('rashail_multi_dropdown'),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const AnimatedCustomDropdownApp(),
+                ));
+              },
+              child: const Text('animated_custom_dropdown'),
             ),
             const SizedBox(height: 16),
           ],
