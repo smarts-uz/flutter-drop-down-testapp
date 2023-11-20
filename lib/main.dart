@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'drop_down_list.dart';
 import 'multi_dropdown.dart';
 import 'multiple_search_selection.dart';
 import 'multiselect.dart';
 
-void main() {
+final supabase = Supabase.instance.client;
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await dotenv.load(fileName: '.env');
+
+  await Supabase.initialize(
+    url: dotenv.env['SUPABASE_URL']!,
+    anonKey: dotenv.env['ANON_KEY']!,
+  );
   runApp(const MyApp());
 }
 
