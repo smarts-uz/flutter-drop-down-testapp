@@ -15,52 +15,16 @@ class DropDownListExample extends StatefulWidget {
 class _DropDownListExampleState extends State<DropDownListExample> {
   /// This is list of city which will pass to the drop down.
   final List<SelectedListItem> _listOfCities = [
-    SelectedListItem(
-      name: kTokyo,
-      value: "TYO",
-      isSelected: false,
-    ),
-    SelectedListItem(
-      name: kNewYork,
-      value: "NY",
-      isSelected: false,
-    ),
-    SelectedListItem(
-      name: kLondon,
-      value: "LDN",
-      isSelected: false,
-    ),
     SelectedListItem(name: kParis),
-    SelectedListItem(name: kMadrid),
-    SelectedListItem(name: kDubai),
-    SelectedListItem(name: kRome),
-    SelectedListItem(name: kBarcelona),
-    SelectedListItem(name: kCologne),
-    SelectedListItem(name: kMonteCarlo),
-    SelectedListItem(name: kPuebla),
-    SelectedListItem(name: kFlorence),
   ];
 
-  /// This is register text field controllers.
-  final TextEditingController _fullNameTextEditingController =
-  TextEditingController();
-  final TextEditingController _emailTextEditingController =
-  TextEditingController();
-  final TextEditingController _phoneNumberTextEditingController =
-  TextEditingController();
   final TextEditingController _cityTextEditingController =
-  TextEditingController();
-  final TextEditingController _passwordTextEditingController =
-  TextEditingController();
+      TextEditingController();
 
   @override
   void dispose() {
     super.dispose();
-    _fullNameTextEditingController.dispose();
-    _emailTextEditingController.dispose();
-    _phoneNumberTextEditingController.dispose();
     _cityTextEditingController.dispose();
-    _passwordTextEditingController.dispose();
   }
 
   @override
@@ -69,73 +33,43 @@ class _DropDownListExampleState extends State<DropDownListExample> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(title: const Text('drop_down_list')),
       body: SafeArea(
-        child: _mainBody(),
-      ),
-    );
-  }
-
-  /// This is Main Body widget.
-  Widget _mainBody() {
-    return Padding(
-      padding: const EdgeInsets.all(12.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(
-            height: 30.0,
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 30.0,
+              ),
+              const Text(
+                kRegister,
+                style: TextStyle(
+                  fontSize: 34.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(
+                height: 15.0,
+              ),
+              AppTextField(
+                textEditingController: _cityTextEditingController,
+                title: kCity,
+                hint: kChooseYourCity,
+                isCitySelected: true,
+                cities: _listOfCities,
+              ),
+              const SizedBox(
+                height: 15.0,
+              ),
+              _AppElevatedButton(),
+            ],
           ),
-          const Text(
-            kRegister,
-            style: TextStyle(
-              fontSize: 34.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(
-            height: 15.0,
-          ),
-          AppTextField(
-            textEditingController: _fullNameTextEditingController,
-            title: kFullName,
-            hint: kEnterYourName,
-            isCitySelected: false,
-          ),
-          AppTextField(
-            textEditingController: _emailTextEditingController,
-            title: kEmail,
-            hint: kEnterYourEmail,
-            isCitySelected: false,
-          ),
-          AppTextField(
-            textEditingController: _phoneNumberTextEditingController,
-            title: kPhoneNumber,
-            hint: kEnterYourPhoneNumber,
-            isCitySelected: false,
-          ),
-          AppTextField(
-            textEditingController: _cityTextEditingController,
-            title: kCity,
-            hint: kChooseYourCity,
-            isCitySelected: true,
-            cities: _listOfCities,
-          ),
-          AppTextField(
-            textEditingController: _passwordTextEditingController,
-            title: kPassword,
-            hint: kAddYourPassword,
-            isCitySelected: false,
-          ),
-          const SizedBox(
-            height: 15.0,
-          ),
-          _AppElevatedButton(),
-        ],
+        ),
       ),
     );
   }
 }
 
-/// This is Common App textfiled class.
 class AppTextField extends StatefulWidget {
   final TextEditingController textEditingController;
   final String title;
@@ -210,15 +144,15 @@ class _AppTextFieldState extends State<AppTextField> {
           cursorColor: Colors.black,
           onTap: widget.isCitySelected
               ? () {
-            FocusScope.of(context).unfocus();
-            onTextFieldTap();
-          }
+                  FocusScope.of(context).unfocus();
+                  onTextFieldTap();
+                }
               : null,
           decoration: InputDecoration(
             filled: true,
             fillColor: Colors.black12,
             contentPadding:
-            const EdgeInsets.only(left: 8, bottom: 0, top: 0, right: 15),
+                const EdgeInsets.only(left: 8, bottom: 0, top: 0, right: 15),
             hintText: widget.hint,
             border: const OutlineInputBorder(
               borderSide: BorderSide(
@@ -239,7 +173,6 @@ class _AppTextFieldState extends State<AppTextField> {
   }
 }
 
-/// This is common class for 'REGISTER' elevated button.
 class _AppElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -248,13 +181,13 @@ class _AppElevatedButton extends StatelessWidget {
       height: 60.0,
       child: ElevatedButton(
         onPressed: () {},
-        child: const Text(
-          kREGISTER,
-          style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.normal),
-        ),
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color.fromRGBO(70, 76, 222, 1),
           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        ),
+        child: const Text(
+          kREGISTER,
+          style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.normal),
         ),
       ),
     );
