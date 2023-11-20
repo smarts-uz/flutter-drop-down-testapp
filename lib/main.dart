@@ -1,5 +1,6 @@
 import 'package:drop_down_testapp/pages/animated_custom_dropdown.dart';
 import 'package:drop_down_testapp/pages/drop_down_list.dart';
+import 'package:drop_down_testapp/pages/dropdown_button2.dart';
 import 'package:drop_down_testapp/pages/multi_dropdown.dart';
 import 'package:drop_down_testapp/pages/multiple_search_selection.dart';
 import 'package:drop_down_testapp/pages/multiselect.dart';
@@ -120,6 +121,15 @@ class MyRealPage extends StatelessWidget {
                 ));
               },
               child: const Text('animated_custom_dropdown'),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const DropdownButton2App(),
+                ));
+              },
+              child: const Text('dropdown_button2'),
             ),
             const SizedBox(height: 16),
           ],

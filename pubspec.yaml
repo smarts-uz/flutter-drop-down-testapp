@@ -21,9 +21,9 @@ dependencies:
   multi_dropdown: ^2.1.0
   drop_down_list: ^0.0.5
   animated_custom_dropdown: ^2.0.0
+  dropdown_button2: ^2.3.9
 
   # dropdown_search
-  # dropdown_button2
 
   supabase_flutter: ^1.10.25
   flutter_dotenv: ^5.1.0

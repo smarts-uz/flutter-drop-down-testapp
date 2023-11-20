@@ -50,6 +50,7 @@ class _AnimatedCustomDropdownAppState extends State<AnimatedCustomDropdownApp> {
                   debugPrint('changing value to: $value');
                 },
               ),
+              const SizedBox(height: 16),
               const Text('Default'),
               const SizedBox(height: 16),
               CustomDropdown<String>(
@@ -60,6 +61,7 @@ class _AnimatedCustomDropdownAppState extends State<AnimatedCustomDropdownApp> {
                   debugPrint('changing value to: $value');
                 },
               ),
+              const SizedBox(height: 16),
               const Text('Search'),
               const SizedBox(height: 16),
               CustomDropdown<Job>.search(
@@ -70,6 +72,7 @@ class _AnimatedCustomDropdownAppState extends State<AnimatedCustomDropdownApp> {
                   debugPrint('changing value to: $value');
                 },
               ),
+              const SizedBox(height: 16),
               const Text('Search Request'),
               const SizedBox(height: 16),
               CustomDropdown<Pair>.searchRequest(
